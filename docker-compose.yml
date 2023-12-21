@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  db:
+    container_name: inventory-control-database
+    image: mysql:8.0.30-debian
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=inventory_control
+    ports:
+      - 3306:3306
